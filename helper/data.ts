@@ -17,56 +17,23 @@ export const navBar = [
   },
 ];
 
-export const admissionsNavBar = [
+export const whyUs = [
   {
-    admissionsNavBarTitle: "APPLICATION PROCESS",
-    link: "/applications/#applicationprocess",
+    id: 1,
+    title: "Hands on Learning",
+    text: "Our classrooms are equipped thoughtfully designed materials fostering a multisensory, hands on experience",
+    image: "/bg2.jpg",
   },
   {
-    admissionsNavBarTitle: "OPEN HOUSES",
-    link: "/applications/#openhouses",
+    id: 2,
+    title: "We are the best",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    image: "/bg1.jpg",
   },
   {
-    admissionsNavBarTitle: "TUITION",
-    link: "/applications/#tuition",
-  },
-  {
-    admissionsNavBarTitle: "POLICIES & PROCEDURES",
-    link: "/applications/#policies&procedures",
-  },
-  {
-    admissionsNavBarTitle: "FAQs",
-    link: "/applications/#faqs",
-  },
-];
-
-export const features = [
-  {
-    title: "Open House Sign-up",
-    subTitle: "Next Open House",
-    date: {
-      day1: "Friday, March 16 - 10:00AM - 12:00PM",
-      day2: "Friday, March 16 - 10:00AM - 12:00PM",
-      day3: "Friday, March 16 - 10:00AM - 12:00PM",
-    },
-    button: "Call Us",
-    bg: "aqua",
-    link: "#contactus",
-  },
-  {
-    title: "Current Openings",
-    description:
-      "We are currently oppening for children under 3. Please check the Admissions page for more information.",
-    button: "Admissions",
-    bg: "red",
-    link: "#admissions",
-  },
-  {
-    title: "Parent Infant & Child Classes",
-    description:
-      "We are delighted to announce the opening of Guransh Academy, a place where young minds will thrive, hearts will blossom, and endless wonders await. Join us as we embark on this incredible journey of learning, exploration, and growth.",
-    button: "Sign-Up Today",
-    bg: "yellow",
-    link: "",
+    id: 3,
+    title: "We are the best",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    image: "/bg4.jpg",
   },
 ];

@@ -15,7 +15,7 @@ const Header = (props: Props) => {
   return (
     <>
       <NavModal openModal={openModal} setOpenModal={setOpenModal} />
-      <div className="h-[12vh] w-screen flex justify-between items-center px-8 md:px-16 relative bg-gray-100 shadow-md shadow-gray-500">
+      <div className="h-[12vh] w-screen flex justify-between items-center px-4 md:px-16 relative bg-gray-100 shadow-md shadow-gray-500">
         <Image
           src="/logo2.jpg"
           alt="Guransh Academy Logo"
@@ -38,7 +38,7 @@ const Header = (props: Props) => {
             <Link
               key={index}
               href={nav.link}
-              className="text-slate-950 text-lg font-medium hover:border-b-[3.5px] hover:border-red-500"
+              className="text-slate-950 sm:text-lg lg:text-xl font-medium hover:border-b-[3.5px] hover:border-red-500"
             >
               {nav.navBarTitle}
             </Link>
