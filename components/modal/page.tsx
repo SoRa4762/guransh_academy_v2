@@ -13,7 +13,7 @@ const NavModal = ({ openModal, setOpenModal }: Props) => {
       style={{
         background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7))`,
       }}
-      className={`h-screen w-screen z-[999] px-8 flex-col items-center absolute sm:hidden ${
+      className={`h-screen w-screen z-[999] px-8 flex-col items-center absolute sm:hidden overflow-y-hidden ${
         openModal ? "flex" : "hidden"
       } `}
     >

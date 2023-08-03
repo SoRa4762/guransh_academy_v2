@@ -8,9 +8,9 @@ const WhyUs = (props: Props) => {
   return (
     <div
       id="whyus"
-      className="h-full w-full flex flex-col justify-center items-center px-4 md:px-16 bg-slate-200"
+      className="h-full w-full flex flex-col justify-center items-center px-6 md:px-16 bg-slate-200"
     >
-      <h1 className="text-3xl md:text-5xl lg:text-7xl py-6 md:py-10 lg:py-16 font-bold text-slate-950">
+      <h1 className="text-3xl md:text-5xl lg:text-7xl py-6 md:py-10 lg:py-14 font-bold text-slate-950">
         Why Us
       </h1>
 
@@ -31,10 +31,12 @@ const WhyUs = (props: Props) => {
           </div>
 
           <div className="h-full w-full flex flex-col justify-center items-center p-8">
-            <h1 className="text-lg md:text-2xl lg:text-3xl font-bold">
+            <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-yellow-500">
               {why.title}
             </h1>
-            <p className="text-base lg:text-lg text-center">{why.text}</p>
+            <p className="text-sm sm:text-base lg:text-lg text-center">
+              {why.text}
+            </p>
           </div>
         </div>
       ))}

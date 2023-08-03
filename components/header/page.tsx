@@ -15,7 +15,7 @@ const Header = (props: Props) => {
   return (
     <>
       <NavModal openModal={openModal} setOpenModal={setOpenModal} />
-      <div className="h-[12vh] w-screen flex justify-between items-center px-4 md:px-16 relative bg-gray-100 shadow-md shadow-gray-500">
+      <div className="h-[12vh] w-full flex justify-between items-center px-6 md:px-16 relative bg-gray-100 shadow-md shadow-gray-500">
         <Image
           src="/logo2.jpg"
           alt="Guransh Academy Logo"
@@ -33,7 +33,7 @@ const Header = (props: Props) => {
         />
 
         {/* NavBar */}
-        <div className=" sm:flex hidden gap-8 items-center">
+        <div className=" sm:flex hidden gap-4 lg:gap-8 items-center">
           {navBar.map((nav, index) => (
             <Link
               key={index}
