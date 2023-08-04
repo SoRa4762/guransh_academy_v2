@@ -1,7 +1,6 @@
 "use client";
 import { navBar } from "@/helper/data";
-import { faX } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { X } from "lucide-react";
 import Link from "next/link";
 import { Dispatch } from "react";
 
@@ -11,15 +10,14 @@ const NavModal = ({ openModal, setOpenModal }: Props) => {
   return (
     <div
       style={{
-        background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7))`,
+        background: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))`,
       }}
       className={`h-screen w-screen z-[999] px-8 flex-col items-center absolute sm:hidden overflow-y-hidden ${
         openModal ? "flex" : "hidden"
       } `}
     >
-      <div className={`h-[15vh] w-full flex justify-end items-center`}>
-        <FontAwesomeIcon
-          icon={faX}
+      <div className={`h-[12vh] w-full flex justify-end items-center`}>
+        <X
           className={`h-8 w-8  sm:hidden text-slate-50`}
           onClick={() => setOpenModal(false)}
         />

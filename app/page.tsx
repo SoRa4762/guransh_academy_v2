@@ -10,7 +10,6 @@ import WhyUs from "@/components/whyUs/page";
 export default function Home() {
   return (
     <main className="h-full w-full">
-      {/* Header */}
       <Header />
       <HeroSection />
       <AboutUs />

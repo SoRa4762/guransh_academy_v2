@@ -1,11 +1,10 @@
 "use client";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useState } from "react";
 import NavModal from "../modal/page";
 import { navBar } from "@/helper/data";
 import Link from "next/link";
+import { Menu } from "lucide-react";
 
 type Props = {};
 
@@ -26,8 +25,7 @@ const Header = (props: Props) => {
         />
 
         {/* Bar */}
-        <FontAwesomeIcon
-          icon={faBars}
+        <Menu
           className={`h-8 w-8 sm:hidden ${openModal ? "hidden" : "flex"}`}
           onClick={() => setOpenModal(true)}
         />
