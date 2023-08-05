@@ -43,11 +43,11 @@ const Footer = (props: Props) => {
 
     //*second design
     <div
-      className="h-screen w-full bg-gray-200 flex flex-col"
-      // style={{
-      //   background: `url(/mainBG.png)`,
-      //   backgroundSize: "cover",
-      // }}
+      className="h-screen w-full bg-gray-50 flex flex-col"
+      style={{
+        background: `url(/mainBG.png)`,
+        backgroundSize: "cover",
+      }}
     >
       {/* enroll now section */}
       <div className="h-[85vh] sm:h-[75vh] w-full flex flex-col justify-center items-center px-12  md:px-44 gap-6 sm:gap-8">
@@ -66,7 +66,7 @@ const Footer = (props: Props) => {
           child-centered haven. Enroll today and unlock a world of wonder,
           nurturing holistic growth and a love for lifelong learning.
         </p>
-        <Button className="text-slate-50 bg-red-500 hover:bg-red-600 sm:text-lg lg:text-xl rounded-3xl shadow-md w-60 shadow-gray-400">
+        <Button className="text-slate-50 bg-green-500 hover:bg-green-600 sm:text-lg lg:text-xl shadow-md w-60 shadow-gray-400">
           <Link href="/#contactus">Enroll Now</Link>
         </Button>
       </div>
