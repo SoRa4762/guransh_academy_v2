@@ -8,7 +8,7 @@ const AboutUs = (props: Props) => {
       id="aboutus"
       className="min-h-screen w-full flex flex-col justify-center items-center text-center text-slate-50 px-6 sm:px-16"
       style={{
-        background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/bg7.jpg)`,
+        background: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(/aboutUs.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

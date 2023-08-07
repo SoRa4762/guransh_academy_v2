@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Mail, MapPin, Phone } from "lucide-react";
@@ -23,22 +23,57 @@ const ContactUs = (props: Props) => {
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-center py-6 md:py-10 lg:py-14">
             Contact Us
           </h1>
-          <div className="flex gap-4">
+          {/* form */}
+          <form
+            className="flex flex-col gap-4 my-2"
+            action="mailto:sonamjungi007@gmail.com"
+            method="post"
+            encType="text/plain"
+          >
+            <div className="flex gap-4">
+              <Input
+                className="h-12 w-[9.5rem] sm:w-[11.5rem]"
+                placeholder="First Name"
+              />
+              <Input
+                className="h-12 w-[9.5rem] sm:w-[11.5rem]"
+                placeholder="Last Name"
+              />
+            </div>
+
+            <Input className="h-12 w-80 sm:w-96" placeholder="Email" />
             <Input
-              className="h-12 w-[9.5rem] sm:w-[11.5rem]"
-              placeholder="First Name"
+              className="h-12 w-80 sm:w-96"
+              placeholder="Phone Number"
+              type="number"
             />
-            <Input
-              className="h-12 w-[9.5rem] sm:w-[11.5rem]"
-              placeholder="Last Name"
-            />
-          </div>
-          <Input className="h-12 w-80 sm:w-96" placeholder="Email" />
-          <Input className="h-12 w-80 sm:w-96" placeholder="Phone Number" />
-          <Textarea className="w-80 sm:w-96" placeholder="Your Message" />
-          <Button className="text-slate-50 bg-green-500 hover:bg-green-600 sm:text-lg lg:text-xl shadow-md w-80 sm:w-96 shadow-gray-400">
-            Contact Us!
-          </Button>
+            <Textarea className="w-80 sm:w-96" placeholder="Your Message" />
+            <Button className="text-slate-50 bg-green-500 hover:bg-green-600 sm:text-lg lg:text-xl shadow-md w-80 sm:w-96 shadow-gray-400">
+              Contact Us!
+            </Button>
+          </form>
+
+          <p className="w-80 font-medium sm:w-96 flex flex-col lg:text-lg bg-emerald-200 pl-4 py-2 rounded-md">
+            Location
+            <br />
+            <span className="flex items-center gap-2 font-light">
+              <MapPin size={18} /> Tarahara, lorem ipsum
+            </span>
+          </p>
+          <p className="w-80 font-medium sm:w-96 flex flex-col lg:text-lg bg-red-200 pl-4 py-2 rounded-md">
+            Email
+            <br />
+            <span className="flex items-center gap-2 font-light">
+              <Mail size={18} /> guranshacademy@gmail.com
+            </span>
+          </p>
+          <p className="w-80 font-medium sm:w-96 flex flex-col lg:text-lg bg-pink-200 pl-4 py-2 rounded-md">
+            Phone
+            <br />
+            <span className="flex items-center gap-2 font-light">
+              <Phone size={18} /> 9784856548
+            </span>
+          </p>
         </div>
         <div>
           <Map />

@@ -18,7 +18,7 @@ const WhyUs = (props: Props) => {
       {whyUs.map((why) => (
         <div
           key={why.id}
-          className="h-full w-full grid grid-cols-1 sm:grid-cols-2 bg-gray-200 rounded-2xl mb-10"
+          className="h-full w-full grid grid-cols-1 sm:grid-cols-2 bg-gray-200 rounded-2xl mb-10 shadow-md shadow-gray-400"
         >
           <div className="h-96 w-full">
             <Image

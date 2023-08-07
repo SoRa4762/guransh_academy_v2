@@ -6,7 +6,7 @@ const HeroSection = (props: Props) => {
   return (
     <div
       style={{
-        background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(/bg3_1.jpg)`,
+        background: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/bg3_1.jpg)`,
         backgroundPosition: "top",
         backgroundSize: "cover",
       }}
