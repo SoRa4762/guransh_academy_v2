@@ -55,7 +55,7 @@ const ContactUs = (props: Props) => {
 
     onSubmit: ({ firstName, lastName, email, phone, message }) => {
       setContactUsData({ firstName, lastName, email, phone, message });
-      const mailtoLink = `mailto:recipient@example.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:sonamjungi007@gmail.com?subject=${encodeURIComponent(
         "Contact Form Submission"
       )}&body=${encodeURIComponent(
         `First Name: ${values.firstName}\nLast Name: ${values.lastName}\nEmail: ${values.email}\nPhone Number: ${values.phone}\nMessage: ${values.message}`
@@ -154,7 +154,7 @@ const ContactUs = (props: Props) => {
             )}
 
             <Textarea
-              className="text-red-500 text-xs sm:text-sm"
+              className="text-xs sm:text-sm"
               placeholder="Your Message"
               // onChange={handleInputChange}
               name="message"
