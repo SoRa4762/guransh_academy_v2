@@ -20,8 +20,7 @@ const Header = (props: Props) => {
           alt="Guransh Academy Logo"
           width={100}
           height={100}
-          objectFit="cover"
-          className="h-10 sm:h-16 w-10 sm:w-16 rounded-full"
+          className="h-10 sm:h-16 w-10 sm:w-16 rounded-full object-cover"
         />
 
         {/* Bar */}

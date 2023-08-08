@@ -4,10 +4,66 @@ import { Button } from "../ui/button";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Map from "../map/page";
 import { Textarea } from "../ui/textarea";
+import { useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 type Props = {};
 
 const ContactUs = (props: Props) => {
+  const [contactUsData, setContactUsData] = useState<{}>({
+    // firstName: "",
+    // lastName: "",
+    // email: "",
+    // phone: "",
+    // message: "",
+  });
+
+  // const handleInputChange = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   const { name, value } = e.target;
+  //   setContactUsData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  // };
+
+  //formik way
+  const schema = Yup.object().shape({
+    firstName: Yup.string().required(),
+    lastName: Yup.string().required(),
+    email: Yup.string().required().email(),
+    phone: Yup.number().required().min(10),
+    message: Yup.string().required(),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+
+    validationSchema: schema,
+
+    onSubmit: ({ firstName, lastName, email, phone, message }) => {
+      setContactUsData({ firstName, lastName, email, phone, message });
+      const mailtoLink = `mailto:recipient@example.com?subject=${encodeURIComponent(
+        "Contact Form Submission"
+      )}&body=${encodeURIComponent(
+        `First Name: ${values.firstName}\nLast Name: ${values.lastName}\nEmail: ${values.email}\nPhone Number: ${values.phone}\nMessage: ${values.message}`
+      )}`;
+
+      window.location.href = mailtoLink;
+    },
+  });
+  // console.log(contactUsData);
+
+  const { errors, touched, values, handleSubmit, handleChange } = formik;
+
   return (
     <div
       id="contactus"
@@ -26,28 +82,70 @@ const ContactUs = (props: Props) => {
           {/* form */}
           <form
             className="flex flex-col gap-4 my-2"
-            action="mailto:sonamjungi007@gmail.com"
+            onSubmit={handleSubmit}
             method="post"
             encType="text/plain"
           >
             <div className="flex gap-4">
-              <Input
-                className="h-12 w-[9.5rem] sm:w-[11.5rem]"
-                placeholder="First Name"
-              />
-              <Input
-                className="h-12 w-[9.5rem] sm:w-[11.5rem]"
-                placeholder="Last Name"
-              />
+              <div className="flex flex-col">
+                <Input
+                  className="h-12 w-[9.5rem] sm:w-[11.5rem]"
+                  placeholder="First Name"
+                  // onChange={handleInputChange}
+                  name="firstName"
+                  value={values.firstName}
+                  onChange={handleChange}
+                />
+                {errors.firstName && touched.firstName && (
+                  <span>{errors.firstName}</span>
+                )}
+              </div>
+
+              <div className="flex flex-col">
+                <Input
+                  className="h-12 w-[9.5rem] sm:w-[11.5rem]"
+                  placeholder="Last Name"
+                  // onChange={handleInputChange}
+                  name="lastName"
+                  value={values.lastName}
+                  onChange={handleChange}
+                />
+                {errors.lastName && touched.lastName && (
+                  <span>{errors.lastName}</span>
+                )}
+              </div>
             </div>
 
-            <Input className="h-12 w-80 sm:w-96" placeholder="Email" />
+            <Input
+              className="h-12 w-80 sm:w-96"
+              placeholder="Email"
+              // onChange={handleInputChange}
+              name="email"
+              value={values.email}
+              onChange={handleChange}
+            />
+            {errors.email && touched.email && <span>{errors.email}</span>}
+
             <Input
               className="h-12 w-80 sm:w-96"
               placeholder="Phone Number"
               type="number"
+              // onChange={handleInputChange}
+              name="phone"
+              value={values.phone}
+              onChange={handleChange}
             />
-            <Textarea className="w-80 sm:w-96" placeholder="Your Message" />
+            {errors.phone && touched.phone && <span>{errors.phone}</span>}
+
+            <Textarea
+              className="w-80 sm:w-96"
+              placeholder="Your Message"
+              // onChange={handleInputChange}
+              name="message"
+              value={values.message}
+              onChange={handleChange}
+            />
+            {errors.message && touched.message && <span>{errors.message}</span>}
             <Button className="text-slate-50 bg-green-500 hover:bg-green-600 sm:text-lg lg:text-xl shadow-md w-80 sm:w-96 shadow-gray-400">
               Contact Us!
             </Button>
