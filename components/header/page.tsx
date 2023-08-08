@@ -14,7 +14,7 @@ const Header = (props: Props) => {
   return (
     <>
       <NavModal openModal={openModal} setOpenModal={setOpenModal} />
-      <div className="h-[12vh] w-full flex justify-between items-center px-6 md:px-16 relative bg-gray-100 shadow-md shadow-gray-500">
+      <div className="h-[8vh] sm:h-[12vh] w-full flex justify-between items-center px-6 md:px-16 relative bg-gray-100 shadow-md shadow-gray-500">
         <Image
           src="/logo2.jpg"
           alt="Guransh Academy Logo"
