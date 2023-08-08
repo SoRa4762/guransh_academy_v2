@@ -33,13 +33,13 @@ const ContactUs = (props: Props) => {
   const phoneRegExp = /^\d{10}$/;
 
   const schema = Yup.object().shape({
-    firstName: Yup.string().required(),
-    lastName: Yup.string().required(),
-    email: Yup.string().required().email(),
+    firstName: Yup.string().required("first name is a required field!"),
+    lastName: Yup.string().required("last name is a required field!"),
+    email: Yup.string().required("email is a required field!").email(),
     phone: Yup.string()
       .matches(phoneRegExp, "enter a valid phone number")
-      .required(),
-    message: Yup.string().required(),
+      .required("phone is a required field!"),
+    message: Yup.string().required("message is a required field!"),
   });
 
   const formik = useFormik({
@@ -155,7 +155,6 @@ const ContactUs = (props: Props) => {
 
             <Textarea
               className="text-red-500 text-xs sm:text-sm"
-              className="w-80 sm:w-96"
               placeholder="Your Message"
               // onChange={handleInputChange}
               name="message"
