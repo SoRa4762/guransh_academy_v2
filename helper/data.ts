@@ -1,27 +1,27 @@
 export const navBar = [
   {
     navBarTitle: "Home",
-    link: "/#",
+    link: "https://guransh-academy.netlify.app/#",
   },
   {
     navBarTitle: "About Us",
-    link: "/#aboutus",
+    link: "https://guransh-academy.netlify.app/#aboutus",
   },
   {
     navBarTitle: "Why Us",
-    link: "/#whyus",
+    link: "https://guransh-academy.netlify.app/#whyus",
   },
   {
     navBarTitle: "Programs",
-    link: "/#programs",
+    link: "https://guransh-academy.netlify.app/#programs",
   },
   {
     navBarTitle: "Contact Us",
-    link: "/#contactus",
+    link: "https://guransh-academy.netlify.app/#contactus",
   },
   {
     navBarTitle: "FAQ",
-    link: "/#faq",
+    link: "https://guransh-academy.netlify.app/#faq",
   },
 ];
 
