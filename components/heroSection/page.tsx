@@ -10,7 +10,7 @@ const HeroSection = (props: Props) => {
         backgroundPosition: "top",
         backgroundSize: "cover",
       }}
-      className="h-[92vh] sm:h-[88vh] flex flex-col"
+      className="h-[90vh] sm:h-[88vh] flex flex-col"
     >
       <div className="h-full w-full flex flex-col gap-12 justify-center items-center">
         <h1 className="lg:text-7xl sm:text-5xl text-3xl font-bold text-yellow-500 px-8 sm:px-16 lg:px-36 text-center">
