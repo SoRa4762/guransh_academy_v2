@@ -34,7 +34,7 @@ const Header = (props: Props) => {
           {navBar.map((nav, index) => (
             <Link
               key={index}
-              href={nav.link}
+              href={nav?.link}
               className="text-slate-950 sm:text-lg lg:text-xl font-medium hover:border-b-[3.5px] hover:border-red-500"
             >
               {nav.navBarTitle}

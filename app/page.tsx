@@ -8,6 +8,7 @@ import Programs from "@/components/programs/page";
 import WhyUs from "@/components/whyUs/page";
 
 export default function Home() {
+  // <link rel="icon" href="/logo2.jpg" sizes="any" />;
   return (
     <main className="h-full w-full">
       <Header />

@@ -7,6 +7,7 @@ const fredoka = Fredoka({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Guransh Academy",
   description: "The Best Montessori in all of Tarahara",
+  icons: "/logo2.jpg",
 };
 
 export default function RootLayout({
