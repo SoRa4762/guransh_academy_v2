@@ -30,7 +30,7 @@ const Header = (props: Props) => {
         />
 
         {/* NavBar */}
-        <div className=" sm:flex hidden gap-4 lg:gap-8 items-center">
+        <div className="sm:flex hidden gap-4 lg:gap-8 items-center">
           {navBar.map((nav, index) => (
             <Link
               key={index}
