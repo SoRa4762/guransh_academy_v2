@@ -21,9 +21,9 @@ const HeroSection = (props: Props) => {
           Towards Success!
         </h1>
         <p className="lg:text-xl sm:text-base text-sm font-normal text-slate-50 px-14 sm:px-40 lg:px-80 text-center">
-          "Our Montessori embraces each child's journey with trust and care,
-          fostering a future of limitless possibilities where curiosity thrives
-          and minds soar free."
+          &quot;Our Montessori embraces each child&apos;s journey with trust and
+          care, fostering a future of limitless possibilities where curiosity
+          thrives and minds soar free.&quot;
         </p>
       </div>
     </div>

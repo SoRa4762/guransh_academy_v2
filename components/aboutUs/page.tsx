@@ -29,8 +29,8 @@ const AboutUs = (props: Props) => {
       <br />
       <p>
         Join us at Guransh Academy, where we celebrate the magic of childhood
-        and lay the foundation for a bright future. Together, let's embark on a
-        transformative educational experience that inspires, nurtures, and
+        and lay the foundation for a bright future. Together, let&apos;s embark
+        on a transformative educational experience that inspires, nurtures, and
         shapes the leaders of tomorrow.
       </p>
     </div>
