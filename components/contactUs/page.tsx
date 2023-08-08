@@ -30,11 +30,15 @@ const ContactUs = (props: Props) => {
   // };
 
   //formik way
+  const phoneRegExp = /^\d{10}$/;
+
   const schema = Yup.object().shape({
     firstName: Yup.string().required(),
     lastName: Yup.string().required(),
     email: Yup.string().required().email(),
-    phone: Yup.number().required().min(10),
+    phone: Yup.string()
+      .matches(phoneRegExp, "enter a valid phone number")
+      .required(),
     message: Yup.string().required(),
   });
 
@@ -97,7 +101,9 @@ const ContactUs = (props: Props) => {
                   onChange={handleChange}
                 />
                 {errors.firstName && touched.firstName && (
-                  <span>{errors.firstName}</span>
+                  <span className="text-red-500 text-xs sm:text-sm">
+                    {errors.firstName}
+                  </span>
                 )}
               </div>
 
@@ -111,7 +117,9 @@ const ContactUs = (props: Props) => {
                   onChange={handleChange}
                 />
                 {errors.lastName && touched.lastName && (
-                  <span>{errors.lastName}</span>
+                  <span className="text-red-500 text-xs sm:text-sm">
+                    {errors.lastName}
+                  </span>
                 )}
               </div>
             </div>
@@ -124,7 +132,11 @@ const ContactUs = (props: Props) => {
               value={values.email}
               onChange={handleChange}
             />
-            {errors.email && touched.email && <span>{errors.email}</span>}
+            {errors.email && touched.email && (
+              <span className="text-red-500 text-xs sm:text-sm">
+                {errors.email}
+              </span>
+            )}
 
             <Input
               className="h-12 w-80 sm:w-96"
@@ -135,9 +147,14 @@ const ContactUs = (props: Props) => {
               value={values.phone}
               onChange={handleChange}
             />
-            {errors.phone && touched.phone && <span>{errors.phone}</span>}
+            {errors.phone && touched.phone && (
+              <span className="text-red-500 text-xs sm:text-sm">
+                {errors.phone}
+              </span>
+            )}
 
             <Textarea
+              className="text-red-500 text-xs sm:text-sm"
               className="w-80 sm:w-96"
               placeholder="Your Message"
               // onChange={handleInputChange}
@@ -145,7 +162,11 @@ const ContactUs = (props: Props) => {
               value={values.message}
               onChange={handleChange}
             />
-            {errors.message && touched.message && <span>{errors.message}</span>}
+            {errors.message && touched.message && (
+              <span className="text-red-500 text-xs sm:text-sm">
+                {errors.message}
+              </span>
+            )}
             <Button className="text-slate-50 bg-green-500 hover:bg-green-600 sm:text-lg lg:text-xl shadow-md w-80 sm:w-96 shadow-gray-400">
               Contact Us!
             </Button>

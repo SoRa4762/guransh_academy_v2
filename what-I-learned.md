@@ -10,11 +10,33 @@ but i thought it would do, so i wanted to add validation, so i just
 
 -> yarn add formik yup
 
-then 
+then
 
 import {useFormik} from "formik";
-import * as Yup from "yup";
+import \* as Yup from "yup";
 
-const schema = Yup.object({
-    
+const schema = Yup.object().shape({
+firstName: Yup.string().required(),
+lastName: Yup.string().requried(),
+phone: Yup.number().requrired(),
+email: Yup.string().requried().email("Please enter a valid email address"),
+message: Yup.string().required()
+})
+
+//jsut demoed this website to nikesh as well lol, now back to coding aight?
+
+const formik = useFormik({
+initialValue: {
+firstName: "",
+lastName: "",
+email: "",
+phone: "",
+message: "",
+},
+
+
+validationSchema: schema,
+
+//setting up mailto with formik
+onSubmit: ({})
 })
