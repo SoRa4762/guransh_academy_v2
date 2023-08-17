@@ -175,22 +175,25 @@ const ContactUs = (props: Props) => {
             Location
             <br />
             <span className="flex items-center gap-2 font-light">
-              <MapPin size={18} /> Tarahara, lorem ipsum
+              <MapPin size={18} /> Itahari - 20, Milan Tole
             </span>
           </p>
           <p className="w-80 font-medium sm:w-96 flex flex-col lg:text-lg bg-red-200 pl-4 py-2 rounded-md">
             Email
             <br />
             <span className="flex items-center gap-2 font-light">
-              <Mail size={18} /> guranshacademy@gmail.com
+              <Mail size={18} /> guranshacademy79@gmail.com
             </span>
           </p>
           <p className="w-80 font-medium sm:w-96 flex flex-col lg:text-lg bg-pink-200 pl-4 py-2 rounded-md">
             Phone
             <br />
+            {/* <div className="flex"> */}
             <span className="flex items-center gap-2 font-light">
-              <Phone size={18} /> 9784856548
+              <Phone size={18} /> 9803483838
+              <Phone size={18} className="ml-4" /> 9762983355
             </span>
+            {/* </div> */}
           </p>
         </div>
         <div>

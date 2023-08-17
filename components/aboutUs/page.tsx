@@ -6,9 +6,9 @@ const AboutUs = (props: Props) => {
   return (
     <div
       id="aboutus"
-      className="min-h-screen w-full flex flex-col justify-center items-center text-center text-slate-50 px-6 sm:px-16"
+      className="min-h-screen w-full flex flex-col justify-center items-center text-center text-slate-50 px-6 sm:px-48"
       style={{
-        background: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(/aboutUs.jpg)`,
+        background: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(/aboutUs1.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
